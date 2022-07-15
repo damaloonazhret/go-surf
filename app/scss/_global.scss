@@ -1,0 +1,248 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+body{
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	background-color: #171919;
+	color: #fff;
+	text-transform: uppercase;
+}
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.container{
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.headline-left{
+	margin-bottom: 8px;
+	display: inline-block;
+	font-size: 22px;
+	line-height: 32px;
+	letter-spacing: 7.33333px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	opacity: 0.5;
+	padding-left: 103px;
+	position: relative;
+	&::before{
+		content: "";
+		position: absolute;
+		width: 80px;
+		height: 1px;
+		background: #fff;
+		left: 0;
+		top: 50%;
+	}
+}
+
+.headline-right{
+	margin-bottom: 8px;
+	display: inline-block;
+	font-size: 22px;
+	line-height: 32px;
+	letter-spacing: 7.33333px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	opacity: 0.5;
+	padding-right: 103px;
+	position: relative;
+	&::before{
+		content: "";
+		position: absolute;
+		width: 80px;
+		height: 1px;
+		background: #fff;
+		right: 0;
+		top: 50%;
+	}
+}
+
+.title{
+	span{
+		font-size: 200px;
+		color: rgba(#fff, .02);
+		font-weight: 800;
+		position: relative;
+		display: inline-block;
+		transform: translateX(-50px);
+	}	
+	h3{
+		position: absolute;
+		top: 0;
+		right: -5px;
+		color: #fff;
+		font-size: 80px;
+		&::after{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 80px;
+			height: 1px;
+			background-color: $green;
+		}
+	}
+}
+
+.subtitle{
+	display: inline-block;
+	text-align: right;
+	&__head{
+		font-weight: 800;
+		font-size: 40px;
+		padding-right: 10px;
+		span{
+			font-weight: 100;
+		}
+	}
+}
+
+.descr{
+	display: inline-block;
+	&__head{
+		font-weight: 800;
+		font-size: 40px;
+		span{
+			font-weight: 100;
+		}
+	}
+}
+
+.btn{
+	font-weight: 800;
+	font-size: 40px;
+	span{
+		margin-left: 15px;
+		padding: 20px 57px 20px 17px;
+		background-color: $green;
+		display: inline-block;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 1px;
+			background-color: #fff;
+			top: 50%;
+			left: -11px;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 21px;
+			background-image: url(../images/main/arrow-right.svg);
+			top: 50px;
+			right: 17px;
+			transform: translateY(-95%);
+		}
+	}
+}
+
+.surf,
+.holder{
+	padding: 160px 0 120px 0;
+}
+
+.holder{
+	padding-bottom: 265px;
+}
+
+.sleep{
+	padding-top: 100px;
+}
+
+
+.quantity {
+	display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  display: block;
+	border: none;
+	background-color: transparent;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 36px;
+	color: #fff;		
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: static;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 50px;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+	right: 5px;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+	right: 30px;
+}
+
+.letterspacing{
+	letter-spacing: 6px;
+}
+
+.star-list{
+	li{
+		display: inline-block;
+		& + li{
+			margin-left: -30px;
+		}
+	}
+}
